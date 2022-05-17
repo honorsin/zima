@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="css/1-style.css">
+	<link rel="stylesheet" type="text/css" href="css/2-ast.css">
+    <script type="text/javascript" src="js/jquery.js"
+    onload="window.$ = window.jQuery = module.exports;" ></script>
+    <script type="text/javascript" src="js/2-util.js"></script>
+	<script type="text/javascript" src="js/3-vdom.js"></script>
+	<script type="text/javascript" src="js/4-lexical.js"></script>
+	<script type="text/javascript" src="js/4-type_handler.js"></script>
+	<script type="text/javascript" src="js/5-helper.js"></script>
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="left-edr">
+            <div class="flname">
+                <h2 id="flname">Folder Name</h2>
+            </div>
+            <div class="content">
+                <ul id="files">
+
+                </ul>
+            </div>
+        </div>
+        <div id="editor">
+            <div id="control">
+                <!-- 按钮 -->
+                <span class="buttons">
+                    <button id="exp-all" x-t="unfold-all">Unfold All</button>
+                    <button id="col-all" x-t="fold-all">Fold All</button>
+                </span>
+            </div>
+            <div id="content"></div>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
