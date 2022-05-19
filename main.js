@@ -17,7 +17,7 @@ const template = [
                         { properties: ['openDirectory'] }
                     )
                     const location = filePaths[0];
-                    mainWindow.webContents.send('openFolder', location)
+                    mainWindow.webContents.send('openFolder', location, true)
                 }
             },
             {

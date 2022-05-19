@@ -370,6 +370,7 @@ function can_open_fun_in_new_window() {
 
 // 点击引用的模块名后在新窗口中打开
 function can_click_pkg_ref() {
+	const as = $('a.pkg-ref');
 	$('a.pkg-ref').each(function(i, item) {
 		var $item = $(item)
 		var pkg_name = $item.attr('pkg-name')
@@ -384,7 +385,7 @@ function can_click_pkg_ref() {
 			const dir = path.substring(0, path.lastIndexOf('/'))
 			if (pkg_name.startsWith('./')) pkg_name = pkg_name.substring(2)
 			localStorage.setItem('file', `pkg_${dir}/${pkg_name}.js`)
-			window.location.reload()
+			window.refresh()
 		})
 	})
 }
